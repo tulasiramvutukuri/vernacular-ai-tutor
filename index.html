@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vernacular AI Tutor - Learn in Your Language</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #ff6f61, #2a9d8f);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: #2a9d8f;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+        .feature-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .feature-card h3 {
+            color: #ff6f61;
+            margin: 0.5rem 0;
+        }
+        .emoji {
+            font-size: 2rem;
+        }
+        footer {
+            background: #264653;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .intro { font-size: 1rem; }
+            .feature-card { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vernacular AI Tutor</h1>
+        <p class="intro">Learn Coding, English, and Digital Skills in Your Language</p>
+    </header>
+
+    <nav style="background-color: #2a9d8f; padding: 1rem; text-align: center;">
+        <a href="#about" style="color: white; margin: 0 15px; text-decoration: none;">About</a>
+        <a href="#features" style="color: white; margin: 0 15px; text-decoration: none;">Features</a>
+        <a href="#contact" style="color: white; margin: 0 15px; text-decoration: none;">Contact</a>
+    </nav>
+    
+
+    <div class="container">
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <p>A multilingual education platform designed for tier 2 and 3 cities in India. Learn in regional languages like Telugu, Hindi, Tamil, and more—breaking barriers to education with technology.</p>
+        </section>
+
+        <section class="features" id="features">
+            <div class="feature-card">
+                <span class="emoji">🔤</span>
+                <h3>Live Translation</h3>
+                <p>Tech terms instantly translated into your local language for easy understanding.</p>
+            </div>
+            <div class="feature-card">
+                <span class="emoji">🎥</span>
+                <h3>Video + Quiz Learning</h3>
+                <p>Engaging video lessons paired with interactive quizzes to test your skills.</p>
+            </div>
+            <div class="feature-card">
+                <span class="emoji">🎯</span>
+                <h3>For Tier 2/3 Cities</h3>
+                <p>Tailored for learners in smaller cities, making education accessible to all.</p>
+            </div>
+            <div class="feature-card">
+                <span class="emoji">💡</span>
+                <h3>Voice-Controlled Q&A Bot</h3>
+                <p>A bonus feature for low-literacy users—ask questions and get answers via voice!</p>
+            </div>
+        </section>
+    </div>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <form style="display: flex; flex-direction: column; gap: 10px; max-width: 500px; margin: 0 auto;">
+            <input type="text" name="name" placeholder="Your Name" required style="padding: 10px;">
+            <input type="email" name="email" placeholder="Your Email" required style="padding: 10px;">
+            <textarea name="message" placeholder="Your Message" rows="5" style="padding: 10px;"></textarea>
+            <button type="submit" style="background-color: #2a9d8f; color: white; padding: 10px; border: none; cursor: pointer;">
+                Send Message
+            </button>
+              
+
+        </form>
+        <div id="popup" style="display: none; 
+                       position: fixed; 
+                       top: 20px; 
+                       right: 20px; 
+                       background-color: #2a9d8f; 
+                       color: white; 
+                       padding: 15px 20px; 
+                       border-radius: 8px; 
+                       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+                       font-size: 16px;">
+  ✅ Message Sent!
+</div>
+
+    </section>
+    
+
+    <footer>
+        <p>© 2025 Vernacular AI Tutor | Empowering Education in Every Language</p>
+    </footer>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault(); // prevent actual form submission
+
+  // Show popup
+  const popup = document.getElementById("popup");
+  popup.style.display = "block";
+
+  // Hide after 3 seconds
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 3000);
+
+  // Optionally clear the form
+  this.reset();
+});
+
+        // Optional: Add interactivity (e.g., alerts or future enhancements)
+        console.log("Welcome to Vernacular AI Tutor!");
+    </script>
+</body>
+</html>
